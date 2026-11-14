@@ -11,7 +11,7 @@ pipeline {
         stage('Análisis Estático de Seguridad (SAST)') {
             steps {
                 echo "Ejecutando OWASP Dependency-Check..."
-                dependencyCheck additionalArguments: '--project "ProyectoSeguridad" --scan . --format HTML --format XML', 
+                dependencyCheck additionalArguments: '--project "ProyectoSeguridad" --scan . --format HTML --format XML'--nvdApiKey TU_CLAVE_AQUI', 
                                 odcInstallation: 'Default'
             }
         }
